@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="Description" CONTENT="New Orleans Statistics Maps">
+<title>James Steele Howard, M.D. | TSYI Vaccination Rates</title>
+    
+<!-- <meta property="og:image" content="../images/covid_screenshot.png"> -->
+
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css">
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+</style>
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon.apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.32x32.png">
+    <link rel="icon" type="img/png" sizes="16x16" haref="../favicon.16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
+
+	 <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-grey w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="../../index.html" class="w3-bar-item w3-button w3-red w3-hover-grey w3-hover-text-white">
+                <img src="../../images/AbnDist_logo_white_fat.png" height="35">
+                Abnormal Distributions 
+            </a>
+            <a href="../../covid/maps.html" class="w3-bar-item w3-hide-small w3-button w3-padding-large w3-hover-grey w3-hover-text-white">COVID-19 Tracker</a>
+        </div>
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large w3-border">
+            <a href="../../index.html" class="w3-bar-item w3-button w3-padding-large">Abnormal Distributions</a>
+            <a href="../../covid/maps.html" class="w3-bar-item w3-button w3-padding-large">COVID-19 Tracker</a>
+        </div>
+    </div>
+	
+</head> 
+<body>
+    <header class="w3-container w3-red w3-center">
+        <br><br><br>
+        <h3 class="w3-margin w3-xxlarge">TSYI Vaccination Focus Areas</h3>
+        <br>
+    </header>
+    <center>
+    <div>
+        <div style="max-width: 1300px" class="w3-margin-left w3-margin-right">
+            <div class="w3-row-padding">
+      					<br>
+                <div class="w3-border-left w3-border-right">
+                    <div class="w3-border-bottom" style="height:800px">
+                        <div  class="w3-red w3-large" align="center">
+							<h4 class="w3-margin" id="mapWeek"></h4>
+						</div>
+                        <iframe id="iframeMap" name="iframeMap" height=93% width=97% frameborder="0" class="w3-border" src="./map_current.html"></iframe>
+                    </div>    
+								</div>
+								<script>
+									function loadMap() {
+										var theSelect = document.getElementById('selector');
+										var theIframe = document.getElementById('iframeMap');
+										var theUrl;
+										
+										theUrl = theSelect.options[theSelect.selectedIndex].value;
+										theIframe.src = theUrl;
+									}
+								</script>
+                  <div class="w3-light-grey">
+                    <div class="w3-padding">
+											<div class="w3-light-grey w3-border w3-margin-top">
+												<div class="w3-margin column" align="left">
+													<h3 align="left">To Use:</h3>
+													<ul align="left">
+														<li>Use mouse scroll wheel or use map controls to zoom.</li>
+														<li>Mouseover area to reveal detailed information.</li>
+														<li>Click and drag to pan map.</li>
+														<li>Layers of ZIP codes, neighborhood names, and ward numbers can be added/removed by clicking on the layer control located above the map legend.</li>
+													</ul>
+												</div>
+												<!--
+												<div class="w3-margin column">
+													<h3 align="left">Mobile Users:</h3>
+													<ul align="left">
+														<li>Click map link above to load.</li>
+														<li>Pinch or use map controls to zoom.</li>
+														<li>Tap map to reveal detailed information.</li>
+														<li>Tap and drag to pan map.</li>
+														<li>Rotate device to view larger map.</li>
+													</ul>
+												</div> -->
+											</div>
+											<div class="w3-padding w3-grey w3-text-white">
+												<h3 align="left">What this Map Shows:</h3>
+													<p align="left" class="w3-margin-left w3-margin-right">
+														We've got a new tool to focus outreach. This map shows all the areas of the city with a greater than 50% Black population. The darker the areas are, the lower the vaccination rate. There are some areas which the data is unavailable for, specifically portions in the central northern region of the lower 9th. However, this should give us an idea where we want to look at having in-person events in the city to draw the highest number of unvaccinated people. 
+														<br>
+													</p>                        
+											</div>
+											<br>
+                    </div>
+                </div>
+							</div>
+            </div>
+        </div>
+    </center>
+    <br>
+    <footer class="w3-container w3-black w3-padding-64 w3-center w3-opacity">  
+        <div class="w3-xlarge">
+            <h2>Contact Info and Social Media</h2>
+        </div>
+        <div class="w3-xlarge">
+            <a href="https://www.linkedin.com/in/james-steele-howard-05b2461a/" target="_blank" style="text-decoration:none">
+                <i class="fa fa-linkedin fa-2x w3-hover-opacity"></i>
+            </a>
+            <a href="mailto:james.steele.howard.md@abnormaldistributions.com" style="text-decoration:none">
+                <i class="far fa-envelope fa-2x w3-hover-opacity"></i>
+            </a> 
+            |
+            <a href="https://www.facebook.com/james.steele.howard" target="_blank" style="text-decoration:none">
+                <i class="fa fa-facebook-official fa-2x w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.instagram.com/suchaluckyshot/" target="_blank" style="text-decoration:none">
+                <i class="fa fa-instagram fa-2x w3-hover-opacity"></i>
+            </a>
+            <a href="https://twitter.com/AbnDist" target="_blank" style="text-decoration:none">
+                <i class="fa fa-twitter fa-2x w3-hover-opacity"></i>
+            </a>
+            |
+            <a href="https://www.youtube.com/channel/UCTf6eNAioIuUZ5BiP_cyKTA" target="_blank" style="text-decoration:none">
+                <i class="fab fa-youtube fa-2x w3-hover-opacity"></i>
+            </a>
+            <a href="https://github.com/AbnormalDistributions" target="_blank" style="text-decoration:none">
+                <i class="fab fa-github-square fa-2x w3-hover-opacity"></i>
+            </a>
+        </div>
+       
+    </footer>
+    <br>
+    <footer class="w3-container w3-white">
+        <div class = "w3-center">
+            <a href = "../../index.html">AbnormalDistributions.com</a>
+            <br>James Steele Howard, M.D.
+        </div>
+        <div class="w3-xlarge w3-right">	
+            <a href="../../index.html"><img src="../../images/AbnDist_logo_red_fat.png" height="50" width="50"></a>
+        </div>
+        <div class="w3-left">
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+    </footer>
+    <br>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("navDemo");
+				if (x.className.indexOf("w3-show") == -1) {
+					x.className += " w3-show";
+				} else { 
+					x.className = x.className.replace(" w3-show", "");
+				}
+			}
+		</script>
+		<script src="./date.js"></script>
+    </body>
+</html>
